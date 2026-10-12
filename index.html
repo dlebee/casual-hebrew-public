@@ -30,6 +30,15 @@
     </div>
   </section>
 
+  <section class="reel" aria-labelledby="reel-title">
+    <video class="reel-video" src="assets/showreel.mp4" poster="assets/showreel-poster.jpg" width="540" height="1170"
+      autoplay muted loop playsinline controls preload="metadata" aria-label="A 30-second tour of the Casual Hebrew app"></video>
+    <div>
+      <h2 id="reel-title">Thirty seconds in the app</h2>
+      <p>Study a word and hear it said. Quiz yourself. Then talk it through: pick a character, from a Moroccan family in Paris to a Litvak family in Johannesburg, and chat with Israelis in Hebrew. Tap any word you don't know to look it up.</p>
+    </div>
+  </section>
+
   <section class="features" aria-label="What's in the app">
     <div class="card">
       <span class="he">בסדר</span>
@@ -58,5 +67,12 @@
   <span>Built by David Lebee</span>
   <nav><a href="support/">Support</a><a href="privacy/">Privacy Policy</a></nav>
 </footer>
+<script>
+  // Hold the showreel still for people who ask for less motion.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const v = document.querySelector(".reel-video");
+    v.removeAttribute("autoplay"); v.pause();
+  }
+</script>
 </body>
 </html>
