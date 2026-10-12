@@ -4,61 +4,142 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Casual Hebrew</title>
-<meta name="description" content="Everyday spoken Hebrew for people who already read the aleph-bet and nikud. Built by David Lebee.">
+<meta name="description" content="Everyday spoken Hebrew for people who already read the aleph-bet and nikud. Learn the words Israelis actually say, then talk with them. Built by David Lebee.">
+<meta property="og:title" content="Casual Hebrew">
+<meta property="og:description" content="You can read it. Now speak it.">
+<meta property="og:image" content="https://dlebee.github.io/casual-hebrew-public/assets/reel-poster.jpg">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Rubik:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Rubik:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
-<header class="top">
+<body class="home">
+<header class="top top-float">
   <a class="brand" href="./"><img src="assets/icon-256.png" alt=""><span>casual hebrew</span></a>
-  <nav><a href="support/">Support</a><a href="privacy/">Privacy</a></nav>
+  <nav><a href="#tour">Watch</a><a href="support/">Support</a><a href="privacy/">Privacy</a></nav>
 </header>
 
-<main class="wrap">
-  <section class="hero">
-    <img src="assets/icon-256.png" alt="Casual Hebrew app icon">
-    <div>
-      <h1>casual hebrew</h1>
-      <p class="slogan">You can read it. <mark>Now speak it.</mark></p>
-      <p class="lede">For people who already know the aleph-bet and nikud. Learn the 7,500 words Israelis actually say, ranked by how often they come up in film and TV dialogue, with real example sentences and audio you can slow down.</p>
-      <p class="lede lede-he"><span class="he">יודעים לקרוא? בואו נדבר.</span></p>
-      <span class="badge">In beta on iPhone. App Store release coming soon.</span>
+<main>
+  <!-- Hero: Hebrew slang drifting at three depths behind the pitch and a phone playing the app. -->
+  <section class="hero-x">
+    <div class="drift" aria-hidden="true">
+      <span class="slang" data-speed="-0.35" style="--x: 6%;  --y: 14%;"><b>סבבה</b><i>cool</i></span>
+      <span class="slang far" data-speed="-0.15" style="--x: 30%; --y: 6%;"><b>יאללה</b><i>let's go</i></span>
+      <span class="slang near" data-speed="-0.55" style="--x: 58%; --y: 86%;"><b>תכלס</b><i>bottom line</i></span>
+      <span class="slang far" data-speed="-0.12" style="--x: 82%; --y: 10%;"><b>אחלה</b><i>great</i></span>
+      <span class="slang" data-speed="-0.3" style="--x: 88%; --y: 62%;"><b>וואלה</b><i>really?</i></span>
+      <span class="slang far" data-speed="-0.18" style="--x: 12%; --y: 78%;"><b>כאילו</b><i>like…</i></span>
+      <span class="slang near" data-speed="-0.6" style="--x: 46%; --y: 4%;"><b>בקטנה</b><i>no big deal</i></span>
+      <span class="slang far" data-speed="-0.1" style="--x: 66%; --y: 30%;"><b>בסדר</b><i>okay</i></span>
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>You can read it.<br><mark>Now speak it.</mark></h1>
+        <p class="hero-lede">Everyday spoken Hebrew for people who already know the aleph-bet and nikud. Learn the words Israelis actually say, then talk it through with them.</p>
+        <p class="tagline"><span class="he">יודעים לקרוא? בואו נדבר.</span><span class="en">Know how to read? Let's talk.</span></p>
+        <div class="cta">
+          <a class="button" href="#tour">Watch the 30-second tour</a>
+          <span class="soon">Coming soon to the App Store and Google Play</span>
+        </div>
+      </div>
+      <div class="hero-phone" data-speed="0.12">
+        <div class="phone">
+          <video src="assets/showreel.mp4" poster="assets/showreel-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The app in use: studying a word, a quiz, and a conversation"></video>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="reel" aria-labelledby="reel-title">
-    <video class="reel-video" src="assets/showreel.mp4" poster="assets/showreel-poster.jpg" width="540" height="1170"
-      autoplay muted loop playsinline controls preload="metadata" aria-label="A 30-second tour of the Casual Hebrew app"></video>
-    <div>
-      <h2 id="reel-title">Thirty seconds in the app</h2>
-      <p>Study a word and hear it said. Quiz yourself. Then talk it through: pick a character, from a Moroccan family in Paris to a Litvak family in Johannesburg, and chat with Israelis in Hebrew. Tap any word you don't know to look it up.</p>
+  <!-- Learn -->
+  <section class="band band-ground">
+    <div class="wrap split">
+      <div class="copy reveal">
+        <p class="kicker">Learn</p>
+        <h2>Learn it.<br>Hear it.<br><span class="accent">Say it.</span></h2>
+        <p>7,500 words ranked by how often Israelis say them in film and TV dialogue. The first 50 already cover 39% of everyday speech. Every word comes with real sentences and audio you can slow down.</p>
+      </div>
+      <div class="stage">
+        <figure class="phone phone-back" data-speed="0.18"><img src="assets/shots/01-learn.jpg" alt="Level 1: the 50 most common words, with Study and Quiz buttons" loading="lazy" width="600" height="1304"></figure>
+        <figure class="phone phone-front" data-speed="-0.12"><img src="assets/shots/05-study.jpg" alt="A study card for the word כן, yes, with example phrases" loading="lazy" width="600" height="1304"></figure>
+      </div>
     </div>
   </section>
 
-  <section class="features" aria-label="What's in the app">
-    <div class="card">
-      <span class="he">בסדר</span>
-      <h3>Most-used words first</h3>
-      <p>150 levels of 50 words. The first level alone covers 39% of everyday speech.</p>
+  <!-- Quiz -->
+  <section class="band band-sun">
+    <div class="wrap split flip">
+      <div class="copy reveal">
+        <p class="kicker">Quiz</p>
+        <h2>Lock it in.</h2>
+        <p>Quick quizzes hear the word, pick the meaning, and bring back the ones you missed first. New words get mixed in so you keep moving.</p>
+      </div>
+      <div class="stage">
+        <figure class="phone phone-solo" data-speed="0.14"><img src="assets/shots/06-quiz.jpg" alt="A quiz question for רוצה, with To want marked correct" loading="lazy" width="600" height="1304"></figure>
+      </div>
     </div>
-    <div class="card">
-      <span class="he">יאללה</span>
-      <h3>Hebrew script only</h3>
-      <p>No transliteration. Nikud shows on new words, and you can turn it off when you're ready.</p>
+  </section>
+
+  <!-- Talk -->
+  <section class="band band-ink">
+    <div class="wrap split">
+      <div class="copy reveal">
+        <p class="kicker">Talk</p>
+        <h2>Real conversations<br>with <span class="accent">Israelis.</span></h2>
+        <p>A Shabbat dinner in Jerusalem, a taxi from the airport, the barista on Dizengoff, the shuk. Pick who you are, from a Moroccan family in Paris to a Litvak family in Johannesburg, and answer in Hebrew. Tap any word you don't know.</p>
+      </div>
+      <div class="stage stage-fan">
+        <figure class="phone fan-left" data-speed="0.22"><img src="assets/shots/03-personas.jpg" alt="Who are you playing? A list of characters and where their families are from" loading="lazy" width="600" height="1304"></figure>
+        <figure class="phone fan-mid" data-speed="-0.08"><img src="assets/shots/04-chat.jpg" alt="A conversation with Rina in Hebrew, with English under each line" loading="lazy" width="600" height="1304"></figure>
+        <div class="bubble" data-speed="-0.4" aria-hidden="true"><b>יש לי בן דוד בפריז!</b><i>I have a cousin in Paris!</i></div>
+      </div>
     </div>
-    <div class="card">
-      <span class="he">תכלס</span>
-      <h3>Real sentences</h3>
-      <p>Every word comes with the phrases and sentences it actually shows up in.</p>
+  </section>
+
+  <!-- Tour -->
+  <section class="band band-cobalt" id="tour">
+    <div class="wrap tour reveal">
+      <h2>Thirty seconds in the app</h2>
+      <p>Turn the sound on.</p>
+      <video class="tour-video" src="assets/reel.mp4" poster="assets/reel-poster.jpg" controls playsinline preload="none" width="1920" height="1080" aria-label="Casual Hebrew marketing reel"></video>
     </div>
-    <div class="card">
-      <span class="he">בקטנה</span>
-      <h3>Works offline</h3>
-      <p>No account, no ads, no tracking. Your progress stays on your phone.</p>
+  </section>
+
+  <!-- Promise -->
+  <section class="band band-ground">
+    <div class="wrap">
+      <h2 class="promise reveal">No ads. No account.<br><span class="accent">Works offline.</span></h2>
+      <div class="features">
+        <div class="card reveal">
+          <span class="he">בסדר</span><span class="gloss">okay</span>
+          <h3>Most-used words first</h3>
+          <p>150 levels of 50 words, in the order you'll actually hear them.</p>
+        </div>
+        <div class="card reveal">
+          <span class="he">יאללה</span><span class="gloss">let's go</span>
+          <h3>Hebrew script only</h3>
+          <p>No transliteration. Nikud shows on new words, and you can turn it off when you're ready.</p>
+        </div>
+        <div class="card reveal">
+          <span class="he">תכלס</span><span class="gloss">bottom line</span>
+          <h3>Real sentences</h3>
+          <p>Every word comes with the phrases and sentences it actually shows up in.</p>
+        </div>
+        <div class="card reveal">
+          <span class="he">בקטנה</span><span class="gloss">no big deal</span>
+          <h3>Your progress stays yours</h3>
+          <p>No account, no ads, no tracking. Everything stays on your phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-cobalt outro">
+    <div class="wrap reveal">
+      <img src="assets/icon-256.png" alt="" width="112" height="112">
+      <p class="tagline big"><span class="he">יודעים לקרוא? בואו נדבר.</span><span class="en">Know how to read? Let's talk.</span></p>
+      <p class="soon">Coming soon to the App Store and Google Play</p>
     </div>
   </section>
 </main>
@@ -68,11 +149,36 @@
   <nav><a href="support/">Support</a><a href="privacy/">Privacy Policy</a></nav>
 </footer>
 <script>
-  // Hold the showreel still for people who ask for less motion.
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const v = document.querySelector(".reel-video");
-    v.removeAttribute("autoplay"); v.pause();
-  }
+  // Parallax: each [data-speed] element drifts with scroll, relative to the
+  // middle of the screen. Reveals: elements fade up once they scroll into view.
+  // Both stay off for people who ask for less motion.
+  (() => {
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveals = [...document.querySelectorAll(".reveal")];
+    if (still) {
+      reveals.forEach(el => el.classList.add("shown"));
+      document.querySelectorAll("video[autoplay]").forEach(v => { v.removeAttribute("autoplay"); v.pause(); });
+      return;
+    }
+    const movers = [...document.querySelectorAll("[data-speed]")];
+    let queued = false;
+    const move = () => {
+      queued = false;
+      const mid = innerHeight / 2;
+      for (const el of reveals) {
+        if (!el.classList.contains("shown") && el.getBoundingClientRect().top < innerHeight * 0.9) el.classList.add("shown");
+      }
+      for (const el of movers) {
+        const box = el.parentElement.getBoundingClientRect();
+        if (box.bottom < -200 || box.top > innerHeight + 200) continue;
+        const off = (box.top + box.height / 2 - mid) * parseFloat(el.dataset.speed);
+        el.style.setProperty("--py", off.toFixed(1) + "px");
+      }
+    };
+    addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(move); } }, { passive: true });
+    addEventListener("resize", move);
+    move();
+  })();
 </script>
 </body>
 </html>
