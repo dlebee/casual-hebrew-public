@@ -1,0 +1,94 @@
+/* Casual Hebrew site. Tokens match brand-kit/brand-sheet.html in casual-hebrew-app. */
+:root {
+  --cobalt: #2747D9;
+  --sun: #FFC23D;
+  --sabra: #FF6F61;
+  --ink: #121A3A;
+  --mute: #5B6386;
+  --ground: #F6F7FC;
+  --panel: #FFFFFF;
+  --line: #DDE1F0;
+  --display: "Fredoka", "Rubik", ui-rounded, system-ui, sans-serif;
+  --body: "Rubik", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cobalt: #5B78FF; --sun: #FFC94F; --sabra: #FF8476; --ink: #EEF0FA;
+    --mute: #A3AACB; --ground: #0C1230; --panel: #151C42; --line: #262F5E;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 17px/1.6 var(--body);
+  padding-inline: 20px;
+}
+a { color: var(--cobalt); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.he { font-family: var(--display); direction: rtl; unicode-bidi: isolate; }
+
+.wrap { max-width: 880px; margin: 0 auto; }
+.narrow { max-width: 680px; margin: 0 auto; }
+
+/* header */
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding-block: 20px; max-width: 880px; margin: 0 auto;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cobalt); }
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+.brand span { font-family: var(--display); font-weight: 600; font-size: 1.3rem; }
+.top nav { display: flex; gap: 18px; font-size: .95rem; }
+.top nav a { color: var(--mute); text-decoration: none; }
+.top nav a:hover, .top nav a[aria-current="page"] { color: var(--cobalt); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; padding-block: 48px 56px; }
+.hero img { width: 148px; height: 148px; border-radius: 34px; box-shadow: 0 24px 48px -24px rgba(39, 71, 217, .5); }
+.hero h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); font-weight: 600; color: var(--cobalt); letter-spacing: -.01em; }
+.slogan { font-family: var(--display); font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 500; margin-top: 6px; }
+.slogan mark { background: linear-gradient(transparent 58%, var(--sun) 58%); color: inherit; padding-inline: .1em; }
+.lede { color: var(--mute); margin-top: 14px; max-width: 52ch; }
+.badge {
+  display: inline-block; margin-top: 20px; padding: 8px 14px; border-radius: 999px;
+  background: color-mix(in srgb, var(--sun) 35%, var(--panel)); font-weight: 500; font-size: .9rem;
+}
+
+/* features */
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; padding-bottom: 56px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card h3 { font-size: 1.15rem; font-weight: 600; }
+.card p { color: var(--mute); font-size: .95rem; }
+.card .he { font-size: 1.5rem; font-weight: 600; color: var(--cobalt); text-align: right; }
+
+/* long-form pages */
+.doc { padding-block: 32px 56px; }
+.doc h1 { font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 600; color: var(--cobalt); }
+.doc .meta { color: var(--mute); margin-top: 8px; font-size: .95rem; }
+.doc h2 { font-size: 1.35rem; font-weight: 600; margin-top: 36px; }
+.doc p, .doc ul { margin-top: 12px; }
+.doc ul { padding-left: 1.2em; }
+.doc li + li { margin-top: 6px; }
+.summary { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; margin-top: 24px; }
+.summary b { font-family: var(--display); font-weight: 600; }
+
+footer {
+  border-top: 1px solid var(--line); padding-block: 24px 40px; max-width: 880px; margin: 0 auto;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--mute); font-size: .9rem;
+}
+footer nav { display: flex; gap: 18px; }
+footer a { color: var(--mute); }
+
+@media (max-width: 640px) {
+  .hero { grid-template-columns: 1fr; gap: 20px; padding-block: 24px 40px; }
+  .hero img { width: 104px; height: 104px; border-radius: 24px; }
+  .top nav { gap: 14px; }
+}
