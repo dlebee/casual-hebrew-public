@@ -8,6 +8,7 @@
   --ground: #F6F7FC;
   --panel: #FFFFFF;
   --line: #DDE1F0;
+  --highlight: #FFC23D;
   --display: "Fredoka", "Rubik", ui-rounded, system-ui, sans-serif;
   --body: "Rubik", "Segoe UI", system-ui, sans-serif;
   color-scheme: light;
@@ -16,6 +17,7 @@
   :root {
     --cobalt: #5B78FF; --sun: #FFC94F; --sabra: #FF8476; --ink: #EEF0FA;
     --mute: #A3AACB; --ground: #0C1230; --panel: #151C42; --line: #262F5E;
+    --highlight: rgba(255, 201, 79, .32);
     color-scheme: dark;
   }
 }
@@ -55,8 +57,9 @@ p { margin: 0; }
 .hero img { width: 148px; height: 148px; border-radius: 34px; box-shadow: 0 24px 48px -24px rgba(39, 71, 217, .5); }
 .hero h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); font-weight: 600; color: var(--cobalt); letter-spacing: -.01em; }
 .slogan { font-family: var(--display); font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 500; margin-top: 6px; }
-.slogan mark { background: linear-gradient(transparent 58%, var(--sun) 58%); color: inherit; padding-inline: .1em; }
+.slogan mark { background: linear-gradient(transparent 58%, var(--highlight) 58%); color: inherit; padding-inline: .1em; }
 .lede { color: var(--mute); margin-top: 14px; max-width: 52ch; }
+.lede-he { display: block; margin-top: 8px; color: var(--ink); font-weight: 500; text-align: left; }
 .badge {
   display: inline-block; margin-top: 20px; padding: 8px 14px; border-radius: 999px;
   background: color-mix(in srgb, var(--sun) 35%, var(--panel)); font-weight: 500; font-size: .9rem;
