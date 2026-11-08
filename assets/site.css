@@ -127,6 +127,14 @@ body.home { padding-inline: 0; overflow-x: clip; }
   box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .45); transition: transform .2s ease, box-shadow .2s ease;
 }
 .button:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(0, 0, 0, .5); }
+.button { display: inline-flex; align-items: center; gap: 10px; }
+.button svg { width: 20px; height: 20px; flex: none; }
+.button .stack { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.button .stack small { font-family: var(--body); font-weight: 400; font-size: .72rem; opacity: .8; }
+.button.white { background: #fff; color: var(--b-ink); }
+.button.ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .55); }
+.button.ghost:hover { box-shadow: inset 0 0 0 2px #fff; }
+.cta.center { justify-content: center; }
 .soon { font-size: .92rem; color: rgba(255, 255, 255, .8); }
 .hero-phone { display: flex; justify-content: center; }
 .hero-phone .phone { width: min(320px, 78vw); transform: rotate(4deg); }
